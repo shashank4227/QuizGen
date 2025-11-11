@@ -368,9 +368,9 @@ const AssignQuiz = () => {
         }}>
           <h3 style={{ color: '#333', margin: '0 0 1rem 0' }}>How Quiz Assignment Works</h3>
           <ul style={{ color: '#666', margin: 0, paddingLeft: '1.5rem' }}>
-            <li style={{ marginBottom: '0.5rem' }}>
+            {/* <li style={{ marginBottom: '0.5rem' }}>
               Users will receive an email notification about the assigned quiz
-            </li>
+            </li> */}
             <li style={{ marginBottom: '0.5rem' }}>
               They can access the quiz through a unique link sent to their email
             </li>

@@ -492,27 +492,27 @@ exports.assignQuiz = async (req, res) => {
         assignments.push(assignment);
 
         // Send email to user
-        try {
-          const emailResult = await sendQuizAssignmentEmail(
-            user.email,
-            `${user.firstName} ${user.lastName}`,
-            quiz.title,
-            `${adminUser.firstName} ${adminUser.lastName}`,
-            frontendUrl
-          );
-          emailResults.push({
-            user: user.email,
-            success: emailResult.success,
-            error: emailResult.error
-          });
-        } catch (emailError) {
-          console.error(`Failed to send email to ${user.email}:`, emailError);
-          emailResults.push({
-            user: user.email,
-            success: false,
-            error: emailError.message
-          });
-        }
+        // try {
+        //   const emailResult = await sendQuizAssignmentEmail(
+        //     user.email,
+        //     `${user.firstName} ${user.lastName}`,
+        //     quiz.title,
+        //     `${adminUser.firstName} ${adminUser.lastName}`,
+        //     frontendUrl
+        //   );
+        //   emailResults.push({
+        //     user: user.email,
+        //     success: emailResult.success,
+        //     error: emailResult.error
+        //   });
+        // } catch (emailError) {
+        //   console.error(`Failed to send email to ${user.email}:`, emailError);
+        //   emailResults.push({
+        //     user: user.email,
+        //     success: false,
+        //     error: emailError.message
+        //   });
+        // }
       }
     }
 
